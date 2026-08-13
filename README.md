@@ -16,6 +16,8 @@ SQLite Database
 SQL Queries
      ↓
 Analysis / Output
+
+
 Module Objectives
 Scrape book information from the website.
 Collect books from multiple categories/pages.
