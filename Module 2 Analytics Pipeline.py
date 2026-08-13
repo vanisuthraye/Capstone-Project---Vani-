@@ -279,23 +279,23 @@ y_train
 grid.best_params_
 
 grid.best_estimator_.oob_score_
-from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+import numpy as np
 
+y_pred = model.predict(X_test)
 
-X=df.drop("fare",axis=1)
+mae = mean_absolute_error(y_test, y_pred)
+rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+r2 = r2_score(y_test, y_pred)
 
-y=df["fare"]
-from sklearn.metrics import *
+n = X_test.shape[0]
+p = X_test.shape[1]
+adjusted_r2 = 1 - (1 - r2) * (n - 1) / (n - p - 1)
 
-MAE
-RMSE
-R2
-Adjusted R2
-sns.scatterplot(
-x=y_test,
-y=residuals
-)
-import joblib
+print("MAE:", mae)
+print("RMSE:", rmse)
+print("R2:", r2)
+print("Adjusted R2:", adjusted_r2)
 
 
 joblib.dump(
