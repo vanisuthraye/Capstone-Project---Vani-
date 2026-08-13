@@ -243,9 +243,9 @@ from imblearn.over_sampling import SMOTE
 
 smote=SMOTE()
 
-X_train_sm,y_train_sm=smote.fit_resample(
-X_train_processed,
-y_train
+X_train_sm, y_train_sm = smote.fit_resample(
+    X_train,
+    y_train
 )
 from sklearn.model_selection import GridSearchCV
 
