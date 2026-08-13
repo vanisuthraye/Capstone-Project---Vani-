@@ -309,14 +309,12 @@ plt.title("Residual Plot")
 plt.show()
 
 joblib.dump(
-best_pipeline,
-"best_titanic_pipeline.joblib"
-)
-loaded=joblib.load(
-"best_titanic_pipeline.joblib"
-)
+best_pipeline = grid_search.best_estimator_
 
-
+joblib.dump(
+    best_pipeline,
+    "best_titanic_pipeline.joblib"
+)
 loaded.predict(
 X_test.head()
 )
