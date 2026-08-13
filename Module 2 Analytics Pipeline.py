@@ -218,11 +218,14 @@ for name,model in models.items():
     pipe.fit(X_train,y_train)
     from sklearn.metrics import *
 
-accuracy_score(...)
-precision_score(...)
-recall_score(...)
-f1_score(...)
-roc_auc_score(...)
+from sklearn.metrics import *
+
+accuracy_score(y_test, y_pred)
+precision_score(y_test, y_pred)
+recall_score(y_test, y_pred)
+f1_score(y_test, y_pred)
+roc_auc_score(y_test, y_pred_proba)
+
 from sklearn.tree import plot_tree
 
 plot_tree(
