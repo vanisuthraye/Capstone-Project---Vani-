@@ -296,7 +296,17 @@ print("MAE:", mae)
 print("RMSE:", rmse)
 print("R2:", r2)
 print("Adjusted R2:", adjusted_r2)
+residuals = y_test - y_pred
 
+sns.scatterplot(
+    x=y_test,
+    y=residuals
+)
+plt.axhline(y=0, color='red', linestyle='--')
+plt.xlabel("Actual Fare")
+plt.ylabel("Residuals")
+plt.title("Residual Plot")
+plt.show()
 
 joblib.dump(
 best_pipeline,
