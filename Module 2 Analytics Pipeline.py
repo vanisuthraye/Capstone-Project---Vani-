@@ -24,7 +24,7 @@ df_clean["age"].fillna(
     df_clean["age"].median(),
     inplace=True
 )
-df_clean.to_csv("titanic_clean.csv", index=False)
+df_clean["age"] = df_clean["age"].fillna(df_clean["age"].median())
 import matplotlib.pyplot as plt
 
 sns.histplot(df_clean["age"], kde=True)
