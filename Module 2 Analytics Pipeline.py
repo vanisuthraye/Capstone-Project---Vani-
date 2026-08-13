@@ -227,11 +227,12 @@ f1_score(y_test, y_pred)
 roc_auc_score(y_test, y_pred_proba)
 
 from sklearn.tree import plot_tree
+features = X_train.columns.tolist()
 
 plot_tree(
     model,
     feature_names=features,
-    class_names=["Dead","Survived"],
+    class_names=["Dead", "Survived"],
     filled=True
 )
 RandomForestClassifier()
