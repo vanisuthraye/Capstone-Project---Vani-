@@ -167,12 +167,15 @@ Query 1 — View all books
 SELECT *
 FROM Books
 LIMIT 10;
+
 Output
+
 book_id | title                  | price | availability | rating
 ----------------------------------------------------------------
 1       | A Light in the Attic  | 51.77 | 22           | 3
 2       | Tipping the Velvet    | 53.74 | 20           | 1
 ...
+
 Query 2 — Find books above a specific price
 SELECT title, price
 FROM Books
