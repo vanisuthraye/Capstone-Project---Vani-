@@ -12,6 +12,7 @@ class QueryResponse(BaseModel):
     confidence: float
     import os
 import chromadb
+!pip install chromadb
 
 from sentence_transformers import SentenceTransformer
 
